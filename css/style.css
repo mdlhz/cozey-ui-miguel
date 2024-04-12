@@ -89,6 +89,84 @@ textarea {
   background-color: rgb(247, 248, 246);
   top: 0px;
 }
+.container-header {
+  position: fixed;
+  width: 100%;
+  top: 90px;
+  padding: 0px 0px 16px;
+  background: rgb(247, 248, 246);
+  transition: all 0.15s ease-in-out 0s;
+  z-index: 9999999;
+}
+.container-responsive {
+  padding: 12px 80px 0px;
+}
+@media (min-width: 1440px){
+  .container-responsive{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container-header-flex {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0px;
+}
+.container-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.container-box-title {
+  margin: 0px;
+  font-size: 60px;
+  font-family: Cozey-Regular;
+  color: rgb(11, 35, 65);
+  padding-bottom: 0px;
+}
+.container-box-description {
+  font-family: HafferXH-Regular;
+  color: rgb(25, 20, 43);
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  background: rgb(236, 235, 231);
+  gap: 10px;
+  width: fit-content;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 8px;
+}
+.container-link {
+  height: 100%;
+  background: transparent;
+  font-family: HafferXH-Regular;
+  font-size: 15px;
+  padding: 6px 16px;
+  color: rgb(11, 35, 65);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.container-link:active {
+  background-color: rgb(11, 35, 65);
+  color: rgb(255, 255, 255);
+}
 
 
 
