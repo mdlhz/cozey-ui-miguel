@@ -38,6 +38,7 @@ html {
   src:  url('fonts/Larsseit/Larsseit.otf') format('otf');
 }
 body {
+  margin: 0;
   font-family: Larsseit, serif;
 }
 /*
@@ -109,20 +110,30 @@ textarea {
 .container-header {
   position: fixed;
   width: 100%;
-  top: 90px;
+  top: 0px;
   padding: 0px 0px 16px;
   background: rgb(247, 248, 246);
   transition: all 0.15s ease-in-out 0s;
   z-index: 9999999;
 }
 .container-responsive {
-  padding: 12px 80px 0px;
+  padding: 12px 80px 0;
 }
 @media (min-width: 1440px){
   .container-responsive{
     width: 1440px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (max-width: 1280px){
+  .container-responsive {
+    padding: 16px 80px 0;
+  }
+}
+@media (max-width: 768px){
+  .container-responsive {
+    padding: 14px 16px 0;
   }
 }
 .container-header-flex {
@@ -180,10 +191,11 @@ textarea {
   cursor: pointer;
   white-space: nowrap;
 }
-.container-link a:active {
+a.active {
   background-color: rgb(11, 35, 65);
   color: rgb(255, 255, 255);
 }
+
 /*
  * Sections
  */
@@ -203,7 +215,7 @@ textarea {
   position: relative;
   flex-wrap: wrap;
   -webkit-box-pack: center;
-  justify-content: center;
+  /*justify-content: center;*/
   gap: 40px;
   margin: 0px auto;
   max-width: 1440px;
