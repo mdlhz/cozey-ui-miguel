@@ -33,7 +33,13 @@ html {
   background: #b3d4fc;
   text-shadow: none;
 }
-
+@font-face {
+  font-family: Larsseit;
+  src:  url('fonts/Larsseit/Larsseit.otf') format('otf');
+}
+body {
+  font-family: Larsseit, serif;
+}
 /*
  * A better looking default horizontal rule
  */
@@ -62,6 +68,9 @@ video {
   vertical-align: middle;
 }
 
+a {
+  text-decoration: none;
+}
 /*
  * Remove default fieldset styles.
  */
@@ -85,7 +94,11 @@ textarea {
    ========================================================================== */
 @font-face {
   font-family: Cozey-Regular;
-  src: url(/fonts/Campton/Campton-Black.otf);
+  src:  url('fonts/QuincyCF/quincycf.otf') format('otf');
+}
+@font-face {
+  font-family: HafferXH-Regular;
+  src:  url('fonts/Larsseit/Larsseit.otf') format('otf');
 }
 .container {
   position: relative;
@@ -167,7 +180,7 @@ textarea {
   cursor: pointer;
   white-space: nowrap;
 }
-.container-link:active {
+.container-link a:active {
   background-color: rgb(11, 35, 65);
   color: rgb(255, 255, 255);
 }
@@ -195,6 +208,28 @@ textarea {
   margin: 0px auto;
   max-width: 1440px;
   padding: 16px 80px;
+}
+@media (max-width: 1024px) {
+  .section-container {
+    justify-items: center;
+    gap: 40px;
+    padding: 16px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 0px;
+  }
+}
+@media (max-width: 425px) {
+  .section-container {
+    display: flex;
+    grid-template-columns: unset;
+    padding: 15px;
+    column-gap: 16px;
+  }
 }
 .section-box {
   position: relative;
@@ -417,7 +452,11 @@ textarea {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-
+@media (max-width: 991px) {
+  :root {
+    font-size: 93.75%;
+  }
+}
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
@@ -442,14 +481,14 @@ textarea {
     text-shadow: none !important;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+  /*a,*/
+  /*a:visited {*/
+  /*  text-decoration: none;*/
+  /*}*/
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+  /*a[href]::after {*/
+  /*  content: " (" attr(href) ")";*/
+  /*}*/
 
   abbr[title]::after {
     content: " (" attr(title) ")";
