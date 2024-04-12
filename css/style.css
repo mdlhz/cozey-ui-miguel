@@ -165,7 +165,7 @@ textarea {
 .container-menu {
   display: flex;
   flex-direction: row;
-  height: 48px;
+  height: 32px;
   background: rgb(236, 235, 231);
   gap: 10px;
   width: fit-content;
@@ -174,7 +174,7 @@ textarea {
   padding: 8px;
 }
 .container-link {
-  height: 100%;
+  height: 63%;
   background: transparent;
   font-family: HafferXH-Regular, serif;
   font-size: 15px;
